@@ -1,8 +1,8 @@
 Deze game is gebaseerd op het template voor 4HV van het Emmauscollege Rotterdam
 
 ## Mijn spel: Football away
-Gemaakt door:
-- Yara Abdulqadir
+Gemaakt door: 
+Yara Abdulqadir
 
 Soort game: 
 lijkt heel klein beetje op Subway surfers, alleen is er wel een finish en levels. 
@@ -41,15 +41,12 @@ rugnummer en naam kun je zelf invullen.
 13. [ ] Er zijn -/+ 10 levels. Het veld blijft het zelfde, alleen de obstakels worden meer en veranderen van plaats. Ook gaat het spel sneller.
 Schets van hoe het spel(veld) er ongeveer uit gaat zien:
   
-Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
+Uitbreiding: *verschuif punten hierheen, zodat het basisspel zeker afkomt*
 - [ ] *later uitwerken*
 - [ ] *later uitwerken*
 - [ ] *later uitwerken*
 
-Uitbreiding: *bedenk iets, bijvoorbeeld bewegende achtergrond*
-- [ ] *later uitwerken*
-- [ ] *later uitwerken*
-- [ ] *later uitwerken*
+![Scherm Ontwerp](/SchetsVanHetSpel.png)
 
 ## Credits
 - Game template van het Emmauscollege Rotterdam https://github.com/emmauscollege/4HV-game-template
