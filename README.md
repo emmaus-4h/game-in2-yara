@@ -8,7 +8,7 @@ Soort game:
 lijkt heel klein beetje op Subway surfers, alleen is er wel een finish en levels. 
 
 Het spel:
-Er is 1 hoofdpersoon die geld moet verzamelen en daarmee tot het einde moet komen. Waar het einde is en wanneer je hem bereikt, hangt van de level af.
+Er is een hoofdpersoon die geld moet verzamelen en daarmee tot het einde moet komen. Waar het einde is en wanneer je hem bereikt, hangt van de level af.
 - hoe hoger je bent qua level, hoe moeilijker het wordt en hoe meer je moet verzamelen.
 - De hoofdpersoon (een voetballer) heeft een aantal hp mee (100) en elke keer dat hij geraakt wordt, gaat er -20 hp vanaf. 0 hp is dat je dood bent en dat je de level opnieuw moet doen. Eenmaal hp eraf in een level, krijg je hem niet erbij, tenzij je dood bent (dus alle hp hebt verloren) dan krijg je alle hp (100) terug en moet je de level opnieuw proberen te halen.
 - Meer over de tegenslag: je wordt doordat er aan de zijkant tegenslag is (welke precies nog onbekend, maar zeer waarschijnlijk voetballen )
