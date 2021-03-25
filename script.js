@@ -52,6 +52,14 @@ var tekenVeld = function () {
   rect(20, 20, width - 2 * 20, height - 2 * 20);
 };
 
+/**
+ * blauwe lucht
+ */
+var tekenLucht = function () {
+  fill ("blue");
+  rect (50,50,50,400);
+};
+
 
 
 
@@ -86,6 +94,18 @@ var tekenSpeler = function(x, y) {
   fill("white");
   ellipse(x, y, 60, 60);
 };
+
+/**
+ * tekenGeld
+ */
+
+var tekenGeld = function() {
+  fill("yellow");
+  ellipse(200, 200, 60, 60);
+
+
+};
+
 
 
 /**
@@ -179,7 +199,7 @@ function draw() {
         // leven eraf of gezondheid verlagen
         // eventueel: nieuwe speler maken
       }
-
+      tekenKogel();
       tekenVeld();
       tekenVijand(vijandX, vijandY);
       tekenKogel(kogelX, kogelY);
