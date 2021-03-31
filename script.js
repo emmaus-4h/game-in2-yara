@@ -101,7 +101,7 @@ var tekenSpeler = function(x, y) {
 
 var tekenGeld = function() {
   fill("yellow");
-  ellipse(200, 200, 60, 60);
+  ellipse(200, 200, 59, 59);
 
 
 };
