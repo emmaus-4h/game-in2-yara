@@ -56,8 +56,8 @@ var tekenVeld = function () {
  * blauwe lucht
  */
 var tekenLucht = function () {
-  fill ("blue");
-  rect (50,50,50,400);
+  fill (59,131,189);
+  rect (20,20,1240,170);
 };
 
 
@@ -97,6 +97,7 @@ var tekenSpeler = function(x, y) {
 
 /**
  * tekenGeld
+ * 's' in het muntje
  */
 
 var tekenGeld = function() {
@@ -106,6 +107,10 @@ var tekenGeld = function() {
 
 };
 
+var tekenGeldIcon = function (){
+  fill ("black")
+  Text(200,200,S)
+}
 
 
 /**
@@ -201,6 +206,8 @@ function draw() {
       }
       tekenKogel();
       tekenVeld();
+      tekenLucht();
+      tekenGeld();
       tekenVijand(vijandX, vijandY);
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
