@@ -61,68 +61,28 @@ var tekenLucht = function () {
 };
 
 /**
- * wolk
- */
-var tekenWolk = function () {
-  fill (173,216,230);
-  ellipse (300,100,100,80);
-};
-
-/**
- * wolk1
+ * wolken
  */
 var tekenWolk1 = function () {
   fill (173,216,230);
-  ellipse (350,90,100,80);
+  ellipse (300,100,100,80); // wolk1.1
+  ellipse (350,90,100,80); // wolk1.2
+  ellipse (400,110,100,80); // wolk1.3
+  ellipse (350,125,100,80); // wolk1.4
 };
 
-/**
- * wolk2
- */
 var tekenWolk2 = function () {
   fill (173,216,230);
-  ellipse (400,110,100,80);
+  ellipse (900,100,100,80); // wolk2.1
+  ellipse (950,90,100,80); // wolk2.2
+  ellipse (1000,110,100,80); // wolk2.3
+  ellipse (950,125,100,80); // wolk2.4
 };
 
-/**
- * wolk3
- */
-var tekenWolk3 = function () {
-  fill (173,216,230);
-  ellipse (350,125,100,80);
-};
 
-/**
- * wolk
- */
-var tekenWolke = function () {
-  fill (173,216,230);
-  ellipse (900,100,100,80);
-};
 
-/**
- * wolk1
- */
-var tekenWolke1 = function () {
-  fill (173,216,230);
-  ellipse (950,90,100,80);
-};
 
-/**
- * wolk2
- */
-var tekenWolke2 = function () {
-  fill (173,216,230);
-  ellipse (1000,110,100,80);
-};
 
-/**
- * wolk3
- */
-var tekenWolke3 = function () {
-  fill (173,216,230);
-  ellipse (950,125,100,80);
-};
 
 
 
@@ -157,16 +117,22 @@ var tekenKogel = function(x, y) {
 
 var tekenSpeler = function(x, y) {
   fill("white");
-  ellipse(x, y, 63, 63);
+  ellipse(x, y, 63, 63); // hoofd
   fill("red");
-  rect (x-50,y+28,90,100);
+  rect (x-50,y+28,90,100); // torso
 fill("black");
-  rect (x-48,y+130,40,100);
-  rect (x+2,y+130,40,100);
+  rect (x-45,y+130,40,100); // been links
+  rect (x+2,y+130,40,100); // been rechts
   fill(200,10,10);
-  rect (x-50,y+28,20,100);
+  rect (x-50,y+28,20,100); // arm links
   fill(200,10,10);
-  rect (x+35,y+28,20,100);
+  rect (x+35,y+28,20,100); // arm rechts
+  fill ("blue");
+  rect (x-45,y+225,40,35); // voet links
+  rect (x+2,y+225,40,35); // voet rechts
+  fill ("white");
+  rect (x-50,y+125,20,15); // arm links
+  rect (x+35,y+125,20,15); // arm rechts
 
 
 };
@@ -281,14 +247,8 @@ function draw() {
       tekenVeld();
       tekenLucht();
       tekenGeld();
-      tekenWolk();
       tekenWolk1();
       tekenWolk2();
-      tekenWolk3();
-      tekenWolke();
-      tekenWolke1();
-      tekenWolke2();
-      tekenWolke3();
       tekenVijand(vijandX, vijandY);
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
