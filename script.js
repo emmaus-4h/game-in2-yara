@@ -60,6 +60,69 @@ var tekenLucht = function () {
   rect (20,20,1240,170);
 };
 
+/**
+ * wolk
+ */
+var tekenWolk = function () {
+  fill (173,216,230);
+  ellipse (300,100,100,80);
+};
+
+/**
+ * wolk1
+ */
+var tekenWolk1 = function () {
+  fill (173,216,230);
+  ellipse (350,90,100,80);
+};
+
+/**
+ * wolk2
+ */
+var tekenWolk2 = function () {
+  fill (173,216,230);
+  ellipse (400,110,100,80);
+};
+
+/**
+ * wolk3
+ */
+var tekenWolk3 = function () {
+  fill (173,216,230);
+  ellipse (350,125,100,80);
+};
+
+/**
+ * wolk
+ */
+var tekenWolke = function () {
+  fill (173,216,230);
+  ellipse (900,100,100,80);
+};
+
+/**
+ * wolk1
+ */
+var tekenWolke1 = function () {
+  fill (173,216,230);
+  ellipse (950,90,100,80);
+};
+
+/**
+ * wolk2
+ */
+var tekenWolke2 = function () {
+  fill (173,216,230);
+  ellipse (1000,110,100,80);
+};
+
+/**
+ * wolk3
+ */
+var tekenWolke3 = function () {
+  fill (173,216,230);
+  ellipse (950,125,100,80);
+};
 
 
 
@@ -86,13 +149,26 @@ var tekenKogel = function(x, y) {
 
 
 /**
+ * opbouwing: hoofd,torso,benen,armen
  * Tekent de speler
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
+
 var tekenSpeler = function(x, y) {
   fill("white");
-  ellipse(x, y, 60, 60);
+  ellipse(x, y, 63, 63);
+  fill("red");
+  rect (x-50,y+28,90,100);
+fill("black");
+  rect (x-48,y+130,40,100);
+  rect (x+2,y+130,40,100);
+  fill(200,10,10);
+  rect (x-50,y+28,20,100);
+  fill(200,10,10);
+  rect (x+35,y+28,20,100);
+
+
 };
 
 /**
@@ -102,15 +178,12 @@ var tekenSpeler = function(x, y) {
 
 var tekenGeld = function() {
   fill("yellow");
-  ellipse(200, 200, 59, 59);
-
+  ellipse(300, 400, 59, 59);
+  
 
 };
 
-var tekenGeldIcon = function (){
-  fill ("black")
-  Text(200,200,S)
-}
+
 
 
 /**
@@ -208,6 +281,14 @@ function draw() {
       tekenVeld();
       tekenLucht();
       tekenGeld();
+      tekenWolk();
+      tekenWolk1();
+      tekenWolk2();
+      tekenWolk3();
+      tekenWolke();
+      tekenWolke1();
+      tekenWolke2();
+      tekenWolke3();
       tekenVijand(vijandX, vijandY);
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
