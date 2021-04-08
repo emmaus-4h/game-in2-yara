@@ -33,6 +33,12 @@ var vijandY = 0;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
+var KEY_SPACE = 32;
+var KEY_LEFT = 37;
+var KEY_UP = 38;
+var KEY_RIGHT = 39;
+var KEY_DOWN = 40;
+
 
 
 
@@ -85,6 +91,15 @@ var tekenWolk2 = function () {
   ellipse (950,125,100,80); // wolk2.4
 };
 
+/**
+ * finish
+ */
+var tekenFinish = function () {
+  fill (212,175,55);
+  rect (480,20,260,170);
+  fill (59,131,189);
+  rect (505,50,210,140);
+};
 
 
 
@@ -253,6 +268,7 @@ function draw() {
       tekenVeld();
       tekenHoofdveld();
       tekenLucht();
+      tekenFinish();
       tekenGeld();
       tekenWolk1();
       tekenWolk2();
