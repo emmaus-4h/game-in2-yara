@@ -52,6 +52,12 @@ var tekenVeld = function () {
   rect(20, 20, width - 2 * 20, height - 2 * 20);
 };
 
+var tekenHoofdveld = function () {
+  stroke ("black");
+  line (-900,10000,200,100); //grenslijn links
+  line (2000,10000,1050,100); //grenslijn rechts
+};
+
 /**
  * blauwe lucht
  */
@@ -245,6 +251,7 @@ function draw() {
       }
       tekenKogel();
       tekenVeld();
+      tekenHoofdveld();
       tekenLucht();
       tekenGeld();
       tekenWolk1();
