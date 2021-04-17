@@ -22,8 +22,9 @@ const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
-var spelerX = 200; // x-positie van speler
-var spelerY = 100; // y-positie van speler
+
+var spelerX = 600; // x-positie van speler
+var spelerY = 300; // y-positie van speler
 
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
@@ -92,6 +93,19 @@ var tekenWolk2 = function () {
 };
 
 /**
+ * bokjes
+ */
+var tekenBokjes = function () {
+
+
+if (tekenBokjes > 0) {
+  fill ("black")
+  rect(2000,200, 200, 200);
+}
+
+}
+
+/**
  * finish
  */
 var tekenFinish = function () {
@@ -136,7 +150,30 @@ var tekenKogel = function(x, y) {
  * @param {number} y y-coördinaat
  */
 
+
 var tekenSpeler = function(x, y) {
+
+if (keyIsDown(KEY_LEFT)) {
+  x = x - 100;
+}
+
+if (keyIsDown(KEY_RIGHT)) {
+  x = x + 100;
+}
+
+if (keyIsDown(KEY_SPACE)) {
+  y = y - 100;
+}
+
+if (keyIsDown(KEY_UP)) {
+  x = x + 100;
+}
+
+
+
+
+
+
   fill("white");
   ellipse(x, y, 63, 63); // hoofd
   fill("red");
@@ -268,6 +305,7 @@ function draw() {
       tekenVeld();
       tekenHoofdveld();
       tekenLucht();
+      tekenBokjes ();
       tekenFinish();
       tekenGeld();
       tekenWolk1();
