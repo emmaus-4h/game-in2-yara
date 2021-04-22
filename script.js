@@ -22,6 +22,9 @@ const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
+var text1 = "go to the finish";
+var text2 = "coins" ;
+
 
 var spelerX = 600; // x-positie van speler
 var spelerY = 300; // y-positie van speler
@@ -96,25 +99,25 @@ var tekenWolk2 = function () {
  * bokjes
  */
 var tekenBokjes = function () {
-
-
-if (tekenBokjes > 0) {
-  fill ("black")
-  rect(2000,200, 200, 200);
-}
-
-}
+  fill ("black");
+  rect (800,500,210,140);
+  fill ("black");
+  rect (300,500,210,140);
+};
 
 /**
  * finish
  */
+
+document.write("go to the finish");
+
+
 var tekenFinish = function () {
   fill (212,175,55);
   rect (480,20,260,170);
   fill (59,131,189);
   rect (505,50,210,140);
 };
-
 
 
 
