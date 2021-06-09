@@ -264,7 +264,9 @@ var checkSpelerGeraakt = function() {
  * @returns {boolean} true als het spel is afgelopen
  */
 var checkGameOver = function() {
-    
+  if (tekenspeler )
+    Fill (200,200,200);
+    Text ('Game over',400,300);
   return false;
 };
 
