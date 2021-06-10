@@ -156,21 +156,7 @@ var tekenKogel = function(x, y) {
 
 var tekenSpeler = function(x, y) {
 
-if (keyIsDown(KEY_LEFT)) {
-  x = x - 100;
-}
 
-if (keyIsDown(KEY_RIGHT)) {
-  x = x + 100;
-}
-
-if (keyIsDown(KEY_SPACE)) {
-  y = y - 100;
-}
-
-if (keyIsDown(KEY_UP)) {
-  x = x + 100;
-}
 
 
 
@@ -203,7 +189,7 @@ fill("black");
  * 's' in het muntje
  */
 
-var tekenGeld = function() {
+var tekenBal = function() {
   fill("yellow");
   ellipse(300, 400, 59, 59);
   
@@ -234,7 +220,21 @@ var beweegKogel = function() {
  * Updatet globale variabele spelerX en spelerY
  */
 var beweegSpeler = function() {
+if (keyIsDown(KEY_LEFT)) {
+  spelerX = spelerX - 10;
+}
 
+if (keyIsDown(KEY_RIGHT)) {
+  spelerX = spelerX + 1;
+}
+
+if (keyIsDown(KEY_SPACE)) {
+  spelerY = spelerY - 10;
+}
+
+if (keyIsDown(KEY_DOWN)) {
+  spelerY = spelerY + 10;
+}
 };
 
 
@@ -310,7 +310,7 @@ function draw() {
       tekenLucht();
       tekenBokjes ();
       tekenFinish();
-      tekenGeld();
+      tekenBal();
       tekenWolk1();
       tekenWolk2();
       tekenVijand(vijandX, vijandY);
