@@ -119,6 +119,14 @@ var tekenFinish = function () {
   rect (505,50,210,140);
 };
 
+var tekenScorebord = function () {
+  fill ("white")
+  rect (20,20,150,100);
+  fill ("black")
+  textSize (25);
+  text ("score",65,50);
+
+}
 
 
 
@@ -193,6 +201,7 @@ var tekenBal = function() {
   fill("yellow");
   ellipse(300, 400, 59, 59);
   
+  
 
 };
 
@@ -222,17 +231,19 @@ var beweegKogel = function() {
 var beweegSpeler = function() {
 if (keyIsDown(KEY_LEFT)) {
   spelerX = spelerX - 10;
+  
+  
 }
 
 if (keyIsDown(KEY_RIGHT)) {
-  spelerX = spelerX + 1;
+  spelerX = spelerX + 10;
 }
 
 if (keyIsDown(KEY_SPACE)) {
   spelerY = spelerY - 10;
 }
 
-if (keyIsDown(KEY_DOWN)) {
+if (keyIsDown(KEY_DOWN )) {
   spelerY = spelerY + 10;
 }
 };
@@ -310,6 +321,7 @@ function draw() {
       tekenLucht();
       tekenBokjes ();
       tekenFinish();
+      tekenScorebord ();
       tekenBal();
       tekenWolk1();
       tekenWolk2();
