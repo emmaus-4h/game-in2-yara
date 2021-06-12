@@ -37,6 +37,8 @@ var vijandY = 0;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
+var speed = 2; // snelheid bal
+
 var KEY_SPACE = 32;
 var KEY_LEFT = 37;
 var KEY_UP = 38;
@@ -112,11 +114,15 @@ var tekenBokjes = function () {
 document.write("go to the finish");
 
 
+
 var tekenFinish = function () {
   fill (212,175,55);
   rect (480,20,260,170);
   fill (59,131,189);
   rect (505,50,210,140);
+  fill ("black");
+  textSize(30);
+  text ("finish",570,45);
 };
 
 var tekenScorebord = function () {
@@ -125,9 +131,11 @@ var tekenScorebord = function () {
   fill ("black")
   textSize (25);
   text ("score",65,50);
-
+/** 
+ * * de score
+ *  */
+  text ("1",90,90);
 }
-
 
 
 
@@ -201,6 +209,7 @@ var tekenBal = function() {
   fill("yellow");
   ellipse(300, 400, 59, 59);
   
+
   
 
 };
@@ -275,7 +284,7 @@ var checkSpelerGeraakt = function() {
  * @returns {boolean} true als het spel is afgelopen
  */
 var checkGameOver = function() {
-    
+   
   return false;
 };
 
