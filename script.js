@@ -37,8 +37,11 @@ var vijandY = 200;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
+var speedY = 2;
 
-var een = 1 ;
+var een = 1;
+var twee = 2;
+var drie = 3;
 
 
 var KEY_SPACE = 32;
@@ -132,11 +135,19 @@ var tekenScorebord = function () {
   rect (20,20,150,100);
   fill ("black")
   textSize (25);
-  text ("score",65,50);
+  text ("score;",65,50);
 /** 
  * * de score
  *  */
-  text ("1",90,90);
+
+
+  text (een,90,90);
+if (keyIsDown(KEY_SPACE)) {
+  text (twee,90,90);
+}
+
+
+  
 
 }
 
@@ -151,27 +162,27 @@ var tekenScorebord = function () {
 
 
 var tekenVijand = function(x,y) {
- fill(66, 66, 66);
-    ellipse(x, y, 50, 50);
+ 
   
   // position of the ball
-var y = 0;
 // how far the ball moves every time
-var speedX = 2;
+var speed = 5;
 
- // move the ball
-    y= y + speedX;
-    if (y > 400) {
-        speedX = -25;
-    }
+
     
-    if (y < 0) {
-        speedX = 5;
+    fill(66, 66, 66);
+    ellipse(x, y, 50, 50);
+    
+    if (x > 375) {
+        speed = -5;
+    }
+    if (x < 0) {
+        speed = 5;
     }
 
-
+    // move the ball
+    x = x + speed;
 };
-
 
 /**
  * Tekent de kogel of de bal
@@ -221,8 +232,7 @@ fill("black");
   fill ("white");
   rect (x-50,y+125,20,15); // arm links
   rect (x+35,y+125,20,15); // arm rechts
- fill("yellow");
- ellipse(x-10, y+225, 59, 59);
+
 
 };
 
@@ -242,6 +252,7 @@ fill("black");
  */
 var beweegVijand = function() {
     
+   
     
 };
 
@@ -304,12 +315,24 @@ var checkSpelerGeraakt = function() {
  * @returns {boolean} true als het spel is afgelopen
  */
 var checkGameOver = function(x,y) {
-   
-   fill ("black");
+   if (x > 200);
+   fill ("green");
    textSize (40);
-   text ("Game Over",20,20);
+   text ("Game Over",20,680);
 
+ 
   return false;
+
+ if (x < 200);
+  background ("green");
+fill ("white");
+textSize (40);
+text ("Game Over",20,680)
+
+
+
+
+
 };
 
 
