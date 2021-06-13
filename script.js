@@ -11,7 +11,7 @@
  */
 
 
-
+.
 
 /* ********************************************* */
 /* globale variabelen die je gebruikt in je game */
@@ -32,14 +32,14 @@ var spelerY = 300; // y-positie van speler
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
 
-var vijandX = 0;   // x-positie van vijand
-var vijandY = 0;   // y-positie van vijand
+var vijandX = 600;   // x-positie van vijand
+var vijandY = 200;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
-var speed = 2; // snelheid bal
 
 var een = 1 ;
+
 
 var KEY_SPACE = 32;
 var KEY_LEFT = 37;
@@ -148,9 +148,27 @@ var tekenScorebord = function () {
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
-var tekenVijand = function(x, y) {
 
+
+var tekenVijand = function(x,y) {
+ fill(66, 66, 66);
+    ellipse(x, y, 50, 50);
   
+  // position of the ball
+var y = 0;
+// how far the ball moves every time
+var speedX = 2;
+
+ // move the ball
+    y= y + speedX;
+    if (y > 400) {
+        speedX = -25;
+    }
+    
+    if (y < 0) {
+        speedX = 5;
+    }
+
 
 };
 
@@ -179,7 +197,9 @@ var tekenKogel = function(x, y) {
 var tekenSpeler = function(x, y) {
 
 
-
+if (keyIsDown(KEY_SPACE)) {
+  y = y - 100;
+}
 
 
 
@@ -207,9 +227,12 @@ fill("black");
 };
 
 /**
- * tekenGeld
- * 's' in het muntje
+ * test
+ * test
  */
+
+    
+  
 
 
 
@@ -219,8 +242,8 @@ fill("black");
  */
 var beweegVijand = function() {
     
+    
 };
-
 
 /**
  * Updatet globale variabelen met positie van kogel of bal
@@ -280,8 +303,12 @@ var checkSpelerGeraakt = function() {
  * Zoekt uit of het spel is afgelopen
  * @returns {boolean} true als het spel is afgelopen
  */
-var checkGameOver = function() {
+var checkGameOver = function(x,y) {
    
+   fill ("black");
+   textSize (40);
+   text ("Game Over",20,20);
+
   return false;
 };
 
@@ -333,7 +360,6 @@ function draw() {
       tekenVijand(vijandX, vijandY);
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
-
       if (checkGameOver()) {
         spelStatus = GAMEOVER;
       }
