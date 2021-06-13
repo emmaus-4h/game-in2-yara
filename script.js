@@ -39,6 +39,8 @@ var score = 0; // aantal behaalde punten
 
 var speed = 2; // snelheid bal
 
+var een = 1 ;
+
 var KEY_SPACE = 32;
 var KEY_LEFT = 37;
 var KEY_UP = 38;
@@ -135,6 +137,7 @@ var tekenScorebord = function () {
  * * de score
  *  */
   text ("1",90,90);
+
 }
 
 
@@ -146,7 +149,8 @@ var tekenScorebord = function () {
  * @param {number} y y-coördinaat
  */
 var tekenVijand = function(x, y) {
-    
+
+  
 
 };
 
@@ -162,6 +166,8 @@ var tekenKogel = function(x, y) {
 };
 
 
+
+
 /**
  * opbouwing: hoofd,torso,benen,armen
  * Tekent de speler
@@ -171,7 +177,6 @@ var tekenKogel = function(x, y) {
 
 
 var tekenSpeler = function(x, y) {
-
 
 
 
@@ -196,7 +201,8 @@ fill("black");
   fill ("white");
   rect (x-50,y+125,20,15); // arm links
   rect (x+35,y+125,20,15); // arm rechts
-
+ fill("yellow");
+ ellipse(x-10, y+225, 59, 59);
 
 };
 
@@ -204,15 +210,6 @@ fill("black");
  * tekenGeld
  * 's' in het muntje
  */
-
-var tekenBal = function() {
-  fill("yellow");
-  ellipse(300, 400, 59, 59);
-  
-
-  
-
-};
 
 
 
@@ -248,7 +245,7 @@ if (keyIsDown(KEY_RIGHT)) {
   spelerX = spelerX + 10;
 }
 
-if (keyIsDown(KEY_SPACE)) {
+if (keyIsDown(KEY_UP)) {
   spelerY = spelerY - 10;
 }
 
@@ -331,7 +328,6 @@ function draw() {
       tekenBokjes ();
       tekenFinish();
       tekenScorebord ();
-      tekenBal();
       tekenWolk1();
       tekenWolk2();
       tekenVijand(vijandX, vijandY);
